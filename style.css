@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box; }
+
+.main {
+  width: 100%;
+  height: 100%; }
+  .main__content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: 5rem 1fr;
+    grid-template-columns: 1fr; }
+
+.content__details {
+  grid-area: 2 / 1 / 3 / 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column; }
+  .content__details .details__title {
+    font-family: 'Do Hyeon', sans-serif;
+    font-size: 10rem;
+    color: #fff;
+    width: 50%; }
+  .content__details .details__description {
+    font-family: 'IBM Plex Mono', monospace;
+    color: #fff;
+    width: 50%; }
+.content__background {
+  grid-area: 1 / 1 / 3 / 2;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .content__background .background__portrait {
+    width: 100%;
+    height: 100%;
+    background: url(https://images.unsplash.com/photo-1509325404979-0e774facceda?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=efb84c75311a1b852887f4137677c8da&auto=format&fit=crop&w=1254&q=80) center center/cover no-repeat;
+    opacity: .2;
+    filter: grayscale(100%);
+    z-index: -1; }
+  .content__background .background__gradient {
+    position: absolute;
+    width: 300%;
+    height: 300%;
+    background-color: #FF3CAC;
+    background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+    animation: rounding 5s linear forwards infinite;
+    z-index: -2; }
+@keyframes rounding {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+
+/*# sourceMappingURL=style.css.map */
